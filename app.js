@@ -13,7 +13,7 @@ const getMetadata = async (path) => {
   return res.data;
 };
 
-app.get('/', async (req, res) => {
+app.get('/v1/getInstanceDeatials', async (req, res) => {
   try {
     const instanceId = await getMetadata('instance/id');
     const zone = await getMetadata('instance/zone');
